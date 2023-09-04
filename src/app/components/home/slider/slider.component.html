@@ -1,0 +1,28 @@
+<div class="overflow-hidden">
+  <div *ngFor="let slide of slider; let i = index" class="relative" [ngClass]="[count === i && arg === -1 ? 'slide-change-left' : '', count === i && arg === +1 ? 'slide-change-right' : ''] " >
+    <div *ngIf="i === count" class="w-[100%] h-[80vh] current-slide">
+      <img
+        [src]="slide.slideUrl"
+        [alt]="slide.alt"
+        class="relative object-cover h-[100%] w-[100%] hover:cursor-pointer onhover"
+      />
+      <div
+        class="absolute text-8xl top-[50%] right-[0%]"
+        (click)="changeSlide(+1)"
+      >
+        >
+      </div>
+      <div
+        class="absolute text-8xl top-[50%] left-[0%]"
+        (click)="changeSlide(-1)"
+      >
+        <
+      </div>
+      <div [ngClass]="animation" class="h-[100%] w-[100%]">
+        <img class=""
+        [src]="slideBackground"
+        [alt]="">
+      </div>
+    </div>
+  </div>
+</div>

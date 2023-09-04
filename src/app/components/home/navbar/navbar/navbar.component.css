@@ -1,0 +1,49 @@
+.mat-toolbar {
+  @apply bg-primaryColor text-secondaryColor flex;
+  height: 70px;
+}
+
+.mat-icon {
+  @apply text-secondaryColor;
+}
+
+.on-hover:hover {
+  @apply text-thirdColor;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.menu ol li {
+  position: relative;
+}
+.menu ol li a:hover {
+  @apply text-thirdColor;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.menu ol li ul {
+  appearance: none;
+  display: none;
+}
+.menu ol li:hover ul {
+  @apply bg-primaryColor;
+  display: block;
+  position: absolute;
+  left: 0;
+  z-index: 100;
+  list-style: none;
+  border-radius: 10px;
+}
+.menu ol li:hover ul li {
+  @apply bg-primaryColor;
+  width: 100%;
+  text-align: start;
+  margin: 2rem 0 1rem 0;
+  padding: 0 20px;
+}
+.login-input {
+  @apply text-center my-[.5rem] bg-primaryColor outline-4 outline-secondaryColor rounded-[10px] text-secondaryColor tracking-[0.2rem] border-2 border-secondaryColor;
+}
+.avatar {
+  object-fit: cover;
+}
+

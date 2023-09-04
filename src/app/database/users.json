@@ -1,0 +1,32 @@
+{
+    "users": [
+      {
+        "id":"001",
+        "login": "aa",
+        "password": "bb",
+        "photo": "",
+        "name": ""
+      },
+      {
+        "id":"002",
+        "login": "cc",
+        "password": "dd",
+        "photo": "",
+        "name": ""
+      },
+      {
+        "id":"003",
+        "login": "admin",
+        "password": "admin123",
+        "photo": "",
+        "name": ""
+      },
+      {
+        "id":"004",
+        "login":"test",
+        "password": "test",
+        "photo": "./assets/img/avatar.jpg",
+        "name": "Anna"
+      }
+    ]
+  }

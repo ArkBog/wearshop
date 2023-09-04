@@ -1,0 +1,50 @@
+.slide {
+  background-image: url("../../../../assets/img/slajd1.png");
+}
+.slide-change-left {
+  animation-name: slide-change-left;
+  animation-duration: 1s;
+}
+.slide-change-right {
+  animation-name: slide-change-right;
+  animation-duration: 1.5s;
+}
+.onhover:hover {
+  scale: 1.2;
+  transition: all 0.3s ease-in-out;
+}
+.background-slide-next, .background-slide-prev {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  
+}
+.background-slide-next img {
+  transform:translateX(100%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} 
+.background-slide-prev img {
+  transform:translateX(-100%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} 
+@keyframes slide-change-left {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0%;
+  }
+}
+@keyframes slide-change-right {
+  from {
+    right: 100%;
+  }
+  to {
+    right: 0%;
+  }
+}

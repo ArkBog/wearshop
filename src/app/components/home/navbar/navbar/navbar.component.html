@@ -1,0 +1,67 @@
+<mat-toolbar>
+  <div class="uppercase text-3xl font-semibold w-1/5 on-hover">logo</div>
+  <div class="w-3/5 menu">
+    <ol class="flex justify-center grow">
+      <li class="px-8 tracking-widest" *ngFor="let option of menuOptions">
+        <a href="">
+          {{ option.name }}
+        </a>
+        <ul>
+          <li *ngFor="let suboption of option.submenu">
+            <a href="">{{ suboption }}</a>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+  <div class="flex w-1/5 relative">
+    <div class="flex px-6 on-hover" (click)="openLoginForm()">
+      <mat-icon fontIcon="person" class="mr-2"></mat-icon>
+      <p class="tracking-widest">Account</p>
+    </div>
+    <div
+      *ngIf="loginFormIsOpen === true"
+      class="absolute mt-[2.5rem] p-[1rem] bg-primaryColor z-10 top-0 left-0 rounded-[10px]"
+    >
+      <form 
+        *ngIf="userLogged === false"
+        [formGroup]="loginForm"
+        (ngSubmit)="onSubmitLogin()"
+        class="flex flex-col"
+      >
+        <p class="mb-2">Have you account? Login now</p>
+        <input
+          class="login-input"
+          type="text"
+          placeholder="Login"
+          formControlName="login"
+        />
+        <input
+        class="login-input"
+          type="password"
+          placeholder="Password"
+          formControlName="password"
+        />
+        <button type="submit" class="login-input hover:cursor-pointer">Log in</button>
+      </form>
+
+      <div *ngIf="userLogged === true" class="text-center">
+        <img [src]="userPhoto" alt="avatar" class="w-[150px] h-[150px] rounded-full avatar">
+        <div class="text-center m-2">Hello {{userName}}</div>
+        <div class="flex justify-between p-2 hover:bg-thirdColor rounded-[10px] transition-all duration-300 cursor-pointer">
+          <p>Your orders</p>
+          <mat-icon fontIcon="shopping_bag" class="ml-2"></mat-icon>
+        </div>
+        <div class="flex justify-between p-2 hover:bg-thirdColor rounded-[10px] transition-all duration-300 cursor-pointer">
+          <p>Settings</p>
+          <mat-icon fontIcon="settings" class="ml-2"></mat-icon>
+        </div>
+      </div>
+    </div>
+    <div class="flex px-6 on-hover">
+      <mat-icon fontIcon="shopping_cart" class="mr-2"></mat-icon>
+      <p class="tracking-widest">Cart</p>
+    </div>
+  </div>
+</mat-toolbar>
+
