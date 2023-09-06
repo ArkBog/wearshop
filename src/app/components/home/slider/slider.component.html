@@ -1,28 +1,30 @@
-<div class="overflow-hidden">
-  <div *ngFor="let slide of slider; let i = index" class="relative" [ngClass]="[count === i && arg === -1 ? 'slide-change-left' : '', count === i && arg === +1 ? 'slide-change-right' : ''] " >
+<div class="overflow-hidden relative">
+  <div
+    *ngFor="let slide of slider; let i = index"
+    class="relative"
+    [ngClass]="[
+      count === i && arg === -1 ? 'slide-change-left' : '',
+      count === i && arg === +1 ?  'slide-change-right' : '',
+    ]"
+  >
     <div *ngIf="i === count" class="w-[100%] h-[80vh] current-slide">
       <img
         [src]="slide.slideUrl"
         [alt]="slide.alt"
         class="relative object-cover h-[100%] w-[100%] hover:cursor-pointer onhover"
       />
-      <div
-        class="absolute text-8xl top-[50%] right-[0%]"
-        (click)="changeSlide(+1)"
-      >
-        >
-      </div>
-      <div
-        class="absolute text-8xl top-[50%] left-[0%]"
-        (click)="changeSlide(-1)"
-      >
-        <
-      </div>
       <div [ngClass]="animation" class="h-[100%] w-[100%]">
-        <img class=""
-        [src]="slideBackground"
-        [alt]="">
+        <img class="" [src]="slideBackground" [alt]="" />
       </div>
     </div>
+  </div>
+  <div class="absolute text-8xl top-[50%] right-[0%]" (click)="changeSlide(+1)">
+    >
+  </div>
+  <div class="absolute text-8xl top-[50%] left-[0%]" (click)="changeSlide(-1)">
+    <
+  </div>
+  <div class="absolute bottom-[10%] left-[47%] flex">
+    <div *ngFor="let pagination of slider; let i = index" class="w-[15px] h-[15px]  m-[10px] rounded-full opacity-70 border border-solid border-secondaryColor hover: cursor-pointer" [ngClass]="count === i ? 'pagination-active' : 'pagination-unactive'" (click)="changeSlideByPagination(i)"></div>
   </div>
 </div>

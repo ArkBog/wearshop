@@ -1,6 +1,3 @@
-.slide {
-  background-image: url("../../../../assets/img/slajd1.png");
-}
 .slide-change-left {
   animation-name: slide-change-left;
   animation-duration: 1s;
@@ -32,6 +29,16 @@
   height: 100%;
   object-fit: cover;
 } 
+.pagination-unactive {
+  @apply bg-primaryColor;
+}
+.pagination-unactive:hover {
+  @apply bg-secondaryColor;
+  transition: all 0.3s ease-in-out;
+}
+.pagination-active {
+  @apply bg-secondaryColor;
+}
 @keyframes slide-change-left {
   from {
     left: 100%;

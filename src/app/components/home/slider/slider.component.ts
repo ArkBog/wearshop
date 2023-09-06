@@ -57,4 +57,7 @@ export class SliderComponent {
       }
     }
   }
+  changeSlideByPagination(param: number) {
+    this.count = param;
+  }
 }
