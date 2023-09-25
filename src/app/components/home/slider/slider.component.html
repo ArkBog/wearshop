@@ -1,4 +1,4 @@
-<div class="overflow-hidden relative">
+<div class="overflow-hidden relative slider">
   <div
     *ngFor="let slide of slider; let i = index"
     class="relative"
@@ -8,6 +8,11 @@
     ]"
   >
     <div *ngIf="i === count" class="w-[100%] h-[80vh] current-slide">
+      <a href="">
+        <div class="overlay-slide">
+          {{slide.title}}
+        </div>
+      </a>
       <img
         [src]="slide.slideUrl"
         [alt]="slide.alt"

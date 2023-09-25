@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Menu } from 'src/app/interfaces/menu';
 import { AuthService } from 'src/app/services/auth.service';
+import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import users from "../../../../database/users.json";
 
 
@@ -12,7 +13,7 @@ const data = users
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css'],
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit {
   menuOptions: Menu[] = [
     {
       name: 'Women',
@@ -32,7 +33,7 @@ export class NavbarComponent {
 
   menuIsOpen = "";
 
-  constructor(private authService:AuthService) {}
+  constructor(private authService:AuthService, public breakpointObserver: BreakpointObserver) {}
 
   usersFounded:any;
   userLogged = false;
@@ -45,6 +46,10 @@ export class NavbarComponent {
     login: new FormControl,
     password: new FormControl,
   })
+
+  ngOnInit(){
+    
+  }
 
   onSubmitLogin(){
     for(let i = 0; i < data.users.length; i++){
@@ -71,5 +76,10 @@ export class NavbarComponent {
   }
   openMenu(arg: string){
     this.menuIsOpen = arg;
+    this.breakpointObserver.observe(['(min-width: 1000px)']).subscribe((state:BreakpointState)=>{
+      if (state.matches){
+        this.menuIsOpen = "";
+      }
+    })
   }
 }

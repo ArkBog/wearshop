@@ -1,3 +1,7 @@
+.slider{
+  color: var(--main-color);
+  text-shadow: 4px 4px 6px rgba(248, 249, 250, 0.7);
+}
 .slide-change-left {
   animation-name: slide-change-left;
   animation-duration: 1s;
@@ -38,6 +42,14 @@
 }
 .pagination-active {
   @apply bg-secondaryColor;
+}
+.overlay-slide {
+  position: absolute;
+  top: 60%;
+  left: 25%;
+  font-size: 4rem;
+  font-weight: 400;
+  z-index: 333;
 }
 @keyframes slide-change-left {
   from {
