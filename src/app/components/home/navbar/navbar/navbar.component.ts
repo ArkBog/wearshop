@@ -30,6 +30,8 @@ export class NavbarComponent {
   login:string = "admin";
   password:string = "admin123";
 
+  menuIsOpen = "";
+
   constructor(private authService:AuthService) {}
 
   usersFounded:any;
@@ -66,5 +68,8 @@ export class NavbarComponent {
       this.loginFormIsOpen = false;
       console.log(this.loginFormIsOpen)
     }
+  }
+  openMenu(arg: string){
+    this.menuIsOpen = arg;
   }
 }
