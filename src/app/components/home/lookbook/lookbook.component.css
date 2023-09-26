@@ -1,0 +1,30 @@
+.lookbook {
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+}
+.lookbook img {
+  transition: all .3s ease-in-out;
+}
+.lookbook:hover {
+  @apply text-thirdColor;
+}
+.lookbook:hover img {
+  scale: 1.2;
+}
+.lookbook-flex{
+    flex-direction: row-reverse;
+    text-align: end;
+}
+@media only screen and (max-width: 1000px){
+    .lookbook{
+        @apply text-secondaryColor;
+        width: 100%;
+    }
+    .lookbook img{
+        display: none;
+    }
+    .lookbook-flex{
+        flex-direction: column;
+        text-align: start;
+    }
+}

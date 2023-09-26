@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from './services/auth.service';
 import {MatBadgeModule} from '@angular/material/badge';
 import { SliderComponent } from './components/home/slider/slider.component';
+import { LookbookComponent } from './components/home/lookbook/lookbook.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { SliderComponent } from './components/home/slider/slider.component';
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    SliderComponent
+    SliderComponent,
+    LookbookComponent
   ],
   imports: [
     BrowserModule,

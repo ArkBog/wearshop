@@ -51,6 +51,18 @@
   font-weight: 400;
   z-index: 333;
 }
+
+@media only screen and (max-width: 1000px) {
+  .overlay-slide {
+    position: absolute;
+    top: 60%;
+    left: 5%;
+    font-size: 2.5rem;
+    font-weight: 400;
+    z-index: 333;
+  }
+}
+
 @keyframes slide-change-left {
   from {
     left: 100%;
