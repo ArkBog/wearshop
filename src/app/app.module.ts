@@ -12,6 +12,7 @@ import { AuthService } from './services/auth.service';
 import {MatBadgeModule} from '@angular/material/badge';
 import { SliderComponent } from './components/home/slider/slider.component';
 import { LookbookComponent } from './components/home/lookbook/lookbook.component';
+import { NewsletterComponent } from './components/home/newsletter/newsletter.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { LookbookComponent } from './components/home/lookbook/lookbook.component
     HomeComponent,
     NavbarComponent,
     SliderComponent,
-    LookbookComponent
+    LookbookComponent,
+    NewsletterComponent
   ],
   imports: [
     BrowserModule,

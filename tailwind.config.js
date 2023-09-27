@@ -11,6 +11,9 @@ module.exports = {
       letterSpacing: {
         widest: ".2rem",
       },
+      backgroundImage: {
+        'newsletter': "url('./assets/img/newsletter.jpg')",
+      }
     },
     colors: {
       primaryColor: "#212529",
