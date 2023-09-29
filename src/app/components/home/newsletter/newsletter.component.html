@@ -1,11 +1,15 @@
-<div class="w-full h-[300px] bg-newsletter bg-fixed bg-cover relative text-secondaryColor">
+<div class="w-full h-[300px] max-[1000px]:h-full bg-newsletter bg-fixed bg-cover relative text-secondaryColor">
     <div class="absolute w-full h-full bg-[#212529e6] text-center text-[3rem]">
         <p class="mt-[40px] tracking-[.4rem]">Join to newsletter and get <b>10% discount</b></p>
         <form class="mt-[20px]">
-            <div class="flex justify-center gap-[20px] align-middle">
+            <div class="flex justify-center gap-[20px]">
                 <input type="email" placeholder="email" class="w-[40%] h-[50px] text-[2rem] tracking-[.4rem] rounded-[10px] text-secondaryColor outline outline-2 outline-secondaryColor pl-2 newsletter-email-input">
-                <input type="submit" value="Submit" class="">
+                <input type="submit" value="Submit" class="w-[150px] h-[50px]  outline outline-2 outline-secondaryColor rounded-[10px] text-secondaryColor text-[2rem] tracking-[.2rem] newsletter-email-input hover:text-thirdColor cursor-pointer">
             </div>
+            <p class="text-[1rem] mt-5 tracking-[.2rem]">
+                <input type="checkbox" class="appearance-none outline outline-1 outline-secondaryColor p-[.4rem] rounded-[2px] newsletter-checkbox">  I
+                accept terms of the newsletter
+            </p>
         </form>
     </div>
 </div>
