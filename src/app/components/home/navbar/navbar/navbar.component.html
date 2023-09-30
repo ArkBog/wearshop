@@ -1,6 +1,6 @@
 <mat-toolbar>
   <div class="uppercase text-3xl font-semibold w-1/5 max-[1000px]:w-4/5">
-    <span class="on-hover">logo</span>
+    <a routerLink=""><span class="on-hover">logo</span></a>
   </div>
   <div class="w-3/5 menu" [style.display]="menuIsOpen">
     <div class="uppercase text-3xl font-semibold close-menu" (click)="openMenu('none')">
@@ -8,12 +8,12 @@
     </div>
     <ol class="flex justify-center grow max-[1000px]:flex-col">
       <li class="px-8 tracking-widest max-[1000px]:m-8" *ngFor="let option of menuOptions">
-        <a href="">
+        <a [routerLink]="option.name ">
           {{ option.name }}
         </a>
         <ul>
           <li *ngFor="let suboption of option.submenu">
-            <a href="">{{ suboption }}</a>
+            <a [routerLink]="suboption.path">{{ suboption.name }}</a>
           </li>
         </ul>
       </li>

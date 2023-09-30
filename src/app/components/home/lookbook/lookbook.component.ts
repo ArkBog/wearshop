@@ -9,9 +9,11 @@ import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 export class LookbookComponent implements OnInit {
   lookbooks = [
     {text: "Look book for her",
-     img: "./assets/img/lookbook-women.jpg"},
+     img: "./assets/img/lookbook-women.jpg",
+    path:'lookbook-women'},
     {text: "Look book for him",
-     img: "./assets/img/lookbook-men.jpg"}
+     img: "./assets/img/lookbook-men.jpg",
+     path:'lookbook-men'}
   ]
 
   photo = false;

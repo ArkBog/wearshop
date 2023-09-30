@@ -1,0 +1,29 @@
+.footer-header {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0 0 1rem 0;
+  }
+ul > li:hover {
+    @apply text-thirdColor;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+svg{
+    margin: 0 2rem 0 2rem;
+    width: 2rem;
+    cursor: pointer;
+}
+svg:hover > g{
+    transition: all .3s ease-in-out;
+    fill: #495057;;
+}
+a:hover{
+    @apply text-secondaryColor;
+    transition: all .3s ease-in-out;
+}
+
+@media only screen and (max-width: 1000px){
+    .footer-header{
+        padding: 0;
+    }
+}
