@@ -16,6 +16,9 @@ import { MenHomeComponent } from './components/men/men-home/men-home.component';
 import { SaleComponent } from './components/sale/sale.component';
 import { LookbookWomenComponent } from './components/home/lookbook/lookbook-women/lookbook-women.component';
 import { LookbookMenComponent } from './components/home/lookbook/lookbook-men/lookbook-men.component';
+import { PrivacyPolicyComponent } from './components/home/footer/privacy-policy/privacy-policy.component';
+import { ShippingComponent } from './components/home/footer/shipping/shipping.component';
+import { ContainsComponent } from './components/home/footer/contains/contains.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -33,7 +36,10 @@ const routes: Routes = [
   {path: 'New in', component: NewInComponent},
   {path: 'Sale', component: SaleComponent},
   {path: 'lookbook-women', component:LookbookWomenComponent},
-  {path: 'lookbook-men', component:LookbookMenComponent}
+  {path: 'lookbook-men', component:LookbookMenComponent},
+  {path: 'privacy-policy', component:PrivacyPolicyComponent},
+  {path: 'shipping', component:ShippingComponent},
+  {path: 'contains', component:ContainsComponent},
 ];
 
 @NgModule({

@@ -3,7 +3,7 @@
     font-weight: 600;
     padding: 0 0 1rem 0;
   }
-ul > li:hover {
+ul > a:hover {
     @apply text-thirdColor;
     transition: all .3s ease-in-out;
     cursor: pointer;
