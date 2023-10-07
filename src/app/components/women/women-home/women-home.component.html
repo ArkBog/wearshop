@@ -1,27 +1,28 @@
 <div class="w-[80%] max-[1000px]:w-full mx-auto flex justify-evenly mt-8">
-
-    <div>bbb</div>
-    <div>ccc</div>
-    <div>ddd</div>
+  <div>bbb</div>
+  <div>ccc</div>
+  <div>ddd</div>
 </div>
-<div class="w-[1000px] max-[1000px]:w-full mx-auto grid grid-cols-3 max-[1000px]:grid-cols-1 mt-8">
-    <div class="w-[300px] h-[400px] rounded-lg bg-primaryColor mx-auto mb-6">
-        <div class="rounded-lg h-[250px]">
-            <img src="./assets/img/lookbook-women.jpg" alt="" class="rounded-lg h-[250px] w-full object-cover">
-        </div>
-        <h1 class="text-secondaryColor text-center">Name</h1>
+<div
+  class="w-[1000px] max-[1000px]:w-full mx-auto grid grid-cols-3 max-[1000px]:grid-cols-1 mt-8"
+>
+  <div *ngFor="let product of products" class="w-[300px] h-[400px] rounded-lg bg-primaryColor mx-auto mb-6 relative on-hover overflow-hidden">
+    <div class="absolute top-1 left-1 text-secondaryColor hover:text-rose-600 z-50">
+        <mat-icon fontIcon="favorite"></mat-icon>
     </div>
-    <div class="w-[300px] h-[400px] rounded-lg bg-primaryColor mx-auto mb-6">
-        <div class="rounded-lg h-[250px]">
-            <img src="./assets/img/lookbook-women.jpg" alt="" class="rounded-lg h-[250px] w-full object-cover">
-        </div>
-        <h1 class="text-secondaryColor text-center">Name</h1>
+    <div *ngIf="product.sale === true" class="absolute left-[50%] top-[10%] text-secondaryColor px-[75px] z-50 uppercase bg-rose-600 origin-center rotate-45">
+        sale
     </div>
-    <div class="w-[300px] h-[400px] rounded-lg bg-primaryColor mx-auto mb-6">
-        <div class="rounded-lg h-[250px]">
-            <img src="./assets/img/lookbook-women.jpg" alt="" class="rounded-lg h-[250px] w-full object-cover">
-        </div>
-        <h1 class="text-secondaryColor text-center">Name</h1>
+    <div class="rounded-lg h-[250px] w-full overflow-hidden">
+      <img
+        [src]="product.mainPhoto"
+        alt=""
+        class="rounded-lg h-[250px] w-full object-cover"
+      />
     </div>
+    <h1 class="text-secondaryColor text-center">{{product.name}}</h1>
+    <div class="w-full text-[2rem] text-center text-secondaryColor font-bold">{{product.price | currency}}</div>
+    <div class="w-full text-[1.5rem] text-center text-secondaryColor font-bold line-through">{{product.oldPrice | currency}}</div>
+  </div>
 
 </div>

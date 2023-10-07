@@ -1,0 +1,72 @@
+{
+  "women": [
+    {
+      "id": 1,
+      "sex": "women",
+      "name": "Leggings",
+      "type": "Pants",
+      "price": 30,
+      "mainPhoto": "./assets/img/products/women/1-main-photo.jpg",
+      "photos": [
+        "./assets/img/products/women/1-photo.jpg",
+        "./assets/img/products/women/1-photo-2.jpg"
+      ],
+      "desc": "lorem ipsum bla bla bla",
+      "color": "black",
+      "size": ["S", "M", "L"],
+      "sale": false,
+      "oldPrice": ""
+    },
+    {
+      "id": 2,
+      "sex": "women",
+      "name": "Jeans",
+      "type": "Pants",
+      "price": 30,
+      "mainPhoto": "./assets/img/products/women/2-main-photo.jpg",
+      "photos": [
+        "./assets/img/products/women/2-photo.jpg",
+        "./assets/img/products/women/2-photo-2.jpg"
+      ],
+      "desc": "lorem ipsum bla bla bla",
+      "color": "blue",
+      "size": ["S", "M"],
+      "sale": true,
+      "oldPrice": "50"
+    },
+    {
+      "id": 3,
+      "sex": "women",
+      "name": "Elegant mini dress",
+      "type": "Dress",
+      "price": 50,
+      "mainPhoto": "./assets/img/products/women/3-main-photo.webp",
+      "photos": [
+        "./assets/img/products/women/3-photo.webp",
+        "./assets/img/products/women/3-photo-2.webp"
+      ],
+      "desc": "lorem ipsum bla bla bla",
+      "color": "black",
+      "size": ["M"],
+      "sale": true,
+      "oldPrice": "100"
+    },
+    {
+      "id": 4,
+      "sex": "women",
+      "name": "Elegant dress",
+      "type": "Dress",
+      "price": 50,
+      "mainPhoto": "./assets/img/products/women/4-main-photo.webp",
+      "photos": [
+        "./assets/img/products/women/4-photo.webp",
+        "./assets/img/products/women/4-photo-2.webp"
+      ],
+      "desc": "lorem ipsum bla bla bla",
+      "color": "red",
+      "size": ["S"],
+      "sale": false,
+      "oldPrice": ""
+    }
+  ]
+}

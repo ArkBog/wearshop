@@ -1,4 +1,5 @@
 const { transform } = require("typescript");
+const colors = require('tailwindcss/colors');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -19,6 +20,7 @@ module.exports = {
       primaryColor: "#212529",
       secondaryColor: "#f8f9fa",
       thirdColor: "#495057",
+      rose: colors.rose
     },
   },
   plugins: [],

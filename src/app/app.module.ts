@@ -34,6 +34,7 @@ import { ShippingComponent } from './components/home/footer/shipping/shipping.co
 import { ContainsComponent } from './components/home/footer/contains/contains.component';
 import { LookbookWomenComponent } from './components/home/lookbook/lookbook-women/lookbook-women.component';
 import { LookbookMenComponent } from './components/home/lookbook/lookbook-men/lookbook-men.component';
+import { ProductsService } from './services/products.service';
 
 
 @NgModule({
@@ -77,7 +78,7 @@ import { LookbookMenComponent } from './components/home/lookbook/lookbook-men/lo
     MatBadgeModule
     
   ],
-  providers: [AuthService],
+  providers: [AuthService, ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
