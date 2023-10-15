@@ -1,0 +1,6 @@
+.active{
+    border: 5px solid #212529;
+}
+.pointer:hover{
+    cursor: pointer;
+}

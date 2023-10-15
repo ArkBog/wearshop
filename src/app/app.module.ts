@@ -35,6 +35,7 @@ import { ContainsComponent } from './components/home/footer/contains/contains.co
 import { LookbookWomenComponent } from './components/home/lookbook/lookbook-women/lookbook-women.component';
 import { LookbookMenComponent } from './components/home/lookbook/lookbook-men/lookbook-men.component';
 import { ProductsService } from './services/products.service';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
 
 @NgModule({
@@ -65,7 +66,8 @@ import { ProductsService } from './services/products.service';
     ShippingComponent,
     ContainsComponent,
     LookbookWomenComponent,
-    LookbookMenComponent
+    LookbookMenComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,

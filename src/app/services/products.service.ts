@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
-import women from '../database/products.json'
+import products from '../database/products.json'
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService {
 
-  women = women
+  products = products.products;
+
+  product:any = '';
 
   constructor() { }
 }

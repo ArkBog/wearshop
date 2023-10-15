@@ -1,13 +1,13 @@
 {
-  "women": [
+  "products": [
     {
       "id": 1,
       "sex": "women",
       "name": "Leggings",
       "type": "Pants",
       "price": 30,
-      "mainPhoto": "./assets/img/products/women/1-main-photo.jpg",
       "photos": [
+        "./assets/img/products/women/1-main-photo.jpg",
         "./assets/img/products/women/1-photo.jpg",
         "./assets/img/products/women/1-photo-2.jpg"
       ],
@@ -15,7 +15,8 @@
       "color": "black",
       "size": ["S", "M", "L"],
       "sale": false,
-      "oldPrice": ""
+      "oldPrice": "",
+      "newIn": true
     },
     {
       "id": 2,
@@ -23,8 +24,8 @@
       "name": "Jeans",
       "type": "Pants",
       "price": 30,
-      "mainPhoto": "./assets/img/products/women/2-main-photo.jpg",
       "photos": [
+        "./assets/img/products/women/2-main-photo.jpg",
         "./assets/img/products/women/2-photo.jpg",
         "./assets/img/products/women/2-photo-2.jpg"
       ],
@@ -32,16 +33,17 @@
       "color": "blue",
       "size": ["S", "M"],
       "sale": true,
-      "oldPrice": "50"
+      "oldPrice": "50",
+      "newIn": false
     },
     {
       "id": 3,
       "sex": "women",
       "name": "Elegant mini dress",
-      "type": "Dress",
+      "type": "Dresses",
       "price": 50,
-      "mainPhoto": "./assets/img/products/women/3-main-photo.webp",
       "photos": [
+        "./assets/img/products/women/3-main-photo.webp",
         "./assets/img/products/women/3-photo.webp",
         "./assets/img/products/women/3-photo-2.webp"
       ],
@@ -49,16 +51,17 @@
       "color": "black",
       "size": ["M"],
       "sale": true,
-      "oldPrice": "100"
+      "oldPrice": "100",
+      "newIn": true
     },
     {
       "id": 4,
       "sex": "women",
       "name": "Elegant dress",
-      "type": "Dress",
+      "type": "Dresses",
       "price": 50,
-      "mainPhoto": "./assets/img/products/women/4-main-photo.webp",
       "photos": [
+        "./assets/img/products/women/4-main-photo.webp",
         "./assets/img/products/women/4-photo.webp",
         "./assets/img/products/women/4-photo-2.webp"
       ],
@@ -66,7 +69,115 @@
       "color": "red",
       "size": ["S"],
       "sale": false,
-      "oldPrice": ""
+      "oldPrice": "",
+      "newIn": false
+    },
+    {
+      "id": 5,
+      "sex": "women",
+      "name": "White shirt",
+      "type": "Shirts",
+      "price": 50,
+      "photos": [
+        "./assets/img/products/women/5-main-photo.webp",
+        "./assets/img/products/women/5-photo.webp",
+        "./assets/img/products/women/5-photo-2.webp"
+      ],
+      "desc": "lorem ipsum bla bla bla",
+      "color": "white",
+      "size": ["S"],
+      "sale": false,
+      "oldPrice": "",
+      "newIn": false
+    },
+    {
+      "id": 6,
+      "sex": "women",
+      "name": "Pink shirt",
+      "type": "Shirts",
+      "price": 70,
+      "photos": [
+        "./assets/img/products/women/6-main-photo.webp",
+        "./assets/img/products/women/6-photo.webp",
+        "./assets/img/products/women/6-photo-2.webp"
+      ],
+      "desc": "lorem ipsum bla bla bla",
+      "color": "pink",
+      "size": ["S", "M", "L"],
+      "sale": false,
+      "oldPrice": "",
+      "newIn": false
+    },
+    {
+      "id": 7,
+      "sex": "women",
+      "name": "Zipped sweatshirt",
+      "type": "Sweatshirts",
+      "price": 70,
+      "photos": [
+        "./assets/img/products/women/7-main-photo.jpg",
+        "./assets/img/products/women/7-photo.webp",
+        "./assets/img/products/women/7-photo-2.webp"
+      ],
+      "desc": "lorem ipsum bla bla bla",
+      "color": "grey",
+      "size": ["S", "M", "L"],
+      "sale": true,
+      "oldPrice": "90",
+      "newIn": false
+    },
+    {
+      "id": 8,
+      "sex": "women",
+      "name": "Printed sweatshirt",
+      "type": "Sweatshirts",
+      "price": 40,
+      "photos": [
+        "./assets/img/products/women/8-main-photo.jpg",
+        "./assets/img/products/women/8-photo.webp",
+        "./assets/img/products/women/8-photo-2.webp"
+      ],
+      "desc": "lorem ipsum bla bla bla",
+      "color": "grey",
+      "size": ["S", "M", "L"],
+      "sale": false,
+      "oldPrice": "",
+      "newIn": true
+    },
+    {
+      "id": 9,
+      "sex": "women",
+      "name": "Classic high heels",
+      "type": "Shoes",
+      "price": 50,
+      "photos": [
+        "./assets/img/products/women/9-main-photo.webp",
+        "./assets/img/products/women/9-photo.webp"
+      ],
+      "desc": "lorem ipsum bla bla bla",
+      "color": "black",
+      "size": ["36", "37", "38", "39"],
+      "sale": false,
+      "oldPrice": "",
+      "newIn": false
+    },
+    {
+      "id": 10,
+      "sex": "women",
+      "name": "White sneakers",
+      "type": "Shoes",
+      "price": 30,
+      "photos": [
+        "./assets/img/products/women/10-main-photo.webp",
+        "./assets/img/products/women/10-photo.webp",
+        "./assets/img/products/women/10-photo-2.webp"
+      ],
+      "desc": "lorem ipsum bla bla bla",
+      "color": "white",
+      "size": ["36", "37"],
+      "sale": true,
+      "oldPrice": "50",
+      "newIn": false
     }
   ]
 }

@@ -98,4 +98,13 @@ export class NavbarComponent implements OnInit {
         }
       });
   }
+  closeMenu(){
+    this.breakpointObserver
+      .observe(['(max-width: 1000px)'])
+      .subscribe((state: BreakpointState) => {
+        if (state.matches) {
+          this.menuIsOpen = 'none';
+        }
+      });
+  }
 }

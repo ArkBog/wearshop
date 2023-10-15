@@ -8,12 +8,12 @@
     </div>
     <ol class="flex justify-center grow max-[1000px]:flex-col">
       <li class="px-8 tracking-widest max-[1000px]:m-8" *ngFor="let option of menuOptions">
-        <a [routerLink]="option.name ">
+        <a [routerLink]="option.name " (click)="closeMenu()">
           {{ option.name }}
         </a>
         <ul>
           <li *ngFor="let suboption of option.submenu">
-            <a [routerLink]="suboption.path">{{ suboption.name }}</a>
+            <a [routerLink]="suboption.path" (click)="closeMenu()">{{ suboption.name }}</a>
           </li>
         </ul>
       </li>

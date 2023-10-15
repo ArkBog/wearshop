@@ -1,0 +1,26 @@
+<div class="w-[1000px] max-[1000px]:w-full mx-auto my-6">
+  <h1
+    class="bg-primaryColor text-secondaryColor rounded-full py-2 text-center tracking-[2px]"
+  >
+    {{ product.name }}
+  </h1>
+  <div class="grid grid-cols-3 grid-rows-4 w-[98%] mx-auto max-[1000px]:flex max-[1000px]:flex-col">
+    <div class="col-span-2 row-span-3 max-[1000px]:w-full">
+      <div class="relative">
+        <img class="w-[100%] max-[1000px]:h-full max-[1000px]:w-auto object-cover rounded-lg" [src]="photoSrc" alt=""  />
+        <div class="flex absolute top-[40%] justify-between w-[100%] text-8xl z-50">
+            <p (click)="changeSlide(-1)" class="pointer"><</p>
+            <p (click)="changeSlide(+1)" class="pointer">></p>
+        </div>
+      </div>
+    </div>
+    <div>{{ product.desc }}</div>
+    <div class="">{{ product.price }}</div>
+    <div class="">add to cart</div>
+    <div class="col-span-2 flex justify-between max-[1000px]:hidden">
+      <div *ngFor="let item of product.photos; let i = index" (click)="paginationChangeSlide(i)">
+        <img [src]="item" alt="" class="w-[150px] h-[150px] object-cover m-6 rounded-lg pointer" [ngClass]=" count === i ? 'active' : '' ">
+      </div>
+    </div>
+  </div>
+</div>
