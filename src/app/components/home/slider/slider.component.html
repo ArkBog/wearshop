@@ -8,25 +8,26 @@
     ]"
   >
     <div *ngIf="i === count" class="w-[100%] h-[80vh] current-slide">
-      <a href="">
+      <a [routerLink]="slide.path">
         <div class="overlay-slide">
           {{slide.title}}
         </div>
-      </a>
+      
       <img
         [src]="slide.slideUrl"
         [alt]="slide.alt"
         class="relative object-cover h-[100%] w-[100%] hover:cursor-pointer onhover"
       />
+    </a>
       <div [ngClass]="animation" class="h-[100%] w-[100%]">
         <img class="" [src]="slideBackground" [alt]="" />
       </div>
     </div>
   </div>
-  <div class="absolute text-8xl top-[50%] right-[0%]" (click)="changeSlide(+1)">
+  <div class="absolute text-8xl top-[50%] right-[0%] pointer" (click)="changeSlide(+1)">
     >
   </div>
-  <div class="absolute text-8xl top-[50%] left-[0%]" (click)="changeSlide(-1)">
+  <div class="absolute text-8xl top-[50%] left-[0%] pointer" (click)="changeSlide(-1)">
     <
   </div>
   <div class="absolute bottom-[10%] left-[47%] flex">

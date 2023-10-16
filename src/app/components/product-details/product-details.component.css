@@ -4,3 +4,8 @@
 .pointer:hover{
     cursor: pointer;
 }
+.on-hover:hover {
+    @apply bg-thirdColor;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }

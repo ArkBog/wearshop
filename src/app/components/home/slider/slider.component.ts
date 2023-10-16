@@ -12,16 +12,19 @@ export class SliderComponent {
       slideUrl: './assets/img/slajd1.png',
       alt: 'string',
       title: 'Check our new brands',
+      path: 'New in',
     },
     {
       slideUrl: './assets/img/slajd2.png',
       alt: 'string',
-      title: 'Check our new brands',
+      title: 'Check latest hot sales',
+      path: 'Sale',
     },
     {
       slideUrl: './assets/img/slajd3.png',
       alt: 'string',
-      title: 'Check our new brands',
+      title: 'Everything for women',
+      path: 'Women',
     },
   ];
 

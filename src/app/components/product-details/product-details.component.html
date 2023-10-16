@@ -14,9 +14,14 @@
         </div>
       </div>
     </div>
-    <div>{{ product.desc }}</div>
-    <div class="">{{ product.price }}</div>
-    <div class="">add to cart</div>
+    <div class="px-2">{{ product.desc }}</div>
+    <div class="px-2 text-center text-3xl font-bold">{{ product.price | currency }}
+      <p class="text-2xl font-normal line-through">{{product.oldPrice | currency}}</p>
+    </div>
+    <div class="px-2 w-full">
+      <button class="rounded-lg bg-primaryColor text-secondaryColor p-3 flex on-hover h-[50px] my-2 mx-auto"><p class="pr-2">Add to cart</p><mat-icon fontIcon="shopping_cart"></mat-icon></button>
+      <button class="rounded-lg bg-primaryColor text-secondaryColor p-3 flex on-hover h-[50px] my-2 mx-auto"><p class="pr-2">Add to favourites</p><mat-icon fontIcon="favorite"></mat-icon></button>
+    </div>
     <div class="col-span-2 flex justify-between max-[1000px]:hidden">
       <div *ngFor="let item of product.photos; let i = index" (click)="paginationChangeSlide(i)">
         <img [src]="item" alt="" class="w-[150px] h-[150px] object-cover m-6 rounded-lg pointer" [ngClass]=" count === i ? 'active' : '' ">

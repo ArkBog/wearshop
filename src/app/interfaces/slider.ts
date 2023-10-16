@@ -1,5 +1,6 @@
 export interface Slider {
     slideUrl: string;
     alt: string;
-    title: string
+    title: string;
+    path: string;
 }
