@@ -178,6 +178,146 @@
       "sale": true,
       "oldPrice": "50",
       "newIn": false
+    },
+    {
+      "id": 11,
+      "sex": "men",
+      "name": "White sneakers",
+      "type": "Shoes",
+      "price": 30,
+      "photos": [
+        "./assets/img/products/men/11-main-photo.webp",
+        "./assets/img/products/men/11-photo.webp"
+      ],
+      "desc": "lorem ipsum bla bla bla",
+      "color": "white",
+      "size": ["40", "43"],
+      "sale": true,
+      "oldPrice": "50",
+      "newIn": false
+    },
+    {
+      "id": 12,
+      "sex": "men",
+      "name": "Elegant shoes",
+      "type": "Shoes",
+      "price": 70,
+      "photos": [
+        "./assets/img/products/men/12-main-photo.webp",
+        "./assets/img/products/men/12-photo.webp"
+      ],
+      "desc": "lorem ipsum bla bla bla",
+      "color": "black",
+      "size": ["40", "41", "42", "43", "44", "45", "46"],
+      "sale": false,
+      "oldPrice": "",
+      "newIn": false
+    },
+    {
+      "id": 13,
+      "sex": "men",
+      "name": "Classic shirt",
+      "type": "Shirts",
+      "price": 70,
+      "photos": [
+        "./assets/img/products/men/13-main-photo.webp",
+        "./assets/img/products/men/13-photo.webp"
+      ],
+      "desc": "lorem ipsum bla bla bla",
+      "color": "blue",
+      "size": ["S", "M", "L", "XL"],
+      "sale": false,
+      "oldPrice": "",
+      "newIn": true
+    },
+    {
+      "id": 14,
+      "sex": "men",
+      "name": "Classic shirt",
+      "type": "Shirts",
+      "price": 30,
+      "photos": [
+        "./assets/img/products/men/14-main-photo.webp",
+        "./assets/img/products/men/14-photo.webp"
+      ],
+      "desc": "lorem ipsum bla bla bla",
+      "color": "brown",
+      "size": ["S"],
+      "sale": true,
+      "oldPrice": 70,
+      "newIn": false
+    },
+    {
+      "id": 15,
+      "sex": "men",
+      "name": "Black sweatshirt",
+      "type": "Sweatshirts",
+      "price": 30,
+      "photos": [
+        "./assets/img/products/men/15-main-photo.jpg",
+        "./assets/img/products/men/15-photo.jpg",
+        "./assets/img/products/men/15-photo-2.jpg"
+      ],
+      "desc": "lorem ipsum bla bla bla",
+      "color": "black",
+      "size": ["S", "M", "L"],
+      "sale": false,
+      "oldPrice": "",
+      "newIn": false
+    },
+    {
+      "id": 16,
+      "sex": "men",
+      "name": "Grey sweatshirt",
+      "type": "Sweatshirts",
+      "price": 40,
+      "photos": [
+        "./assets/img/products/men/16-main-photo.jpg",
+        "./assets/img/products/men/16-photo.jpg",
+        "./assets/img/products/men/16-photo-2.jpg"
+      ],
+      "desc": "lorem ipsum bla bla bla",
+      "color": "grey",
+      "size": ["S", "M", "L", "XL"],
+      "sale": false,
+      "oldPrice": "",
+      "newIn": true
+    },
+    {
+      "id": 17,
+      "sex": "men",
+      "name": "Jeans",
+      "type": "Pants",
+      "price": 60,
+      "photos": [
+        "./assets/img/products/men/17-main-photo.webp",
+        "./assets/img/products/men/17-photo.webp",
+        "./assets/img/products/men/17-photo-2.webp"
+      ],
+      "desc": "lorem ipsum bla bla bla",
+      "color": "black",
+      "size": ["S", "M"],
+      "sale": false,
+      "oldPrice": "",
+      "newIn": true
+    },
+    {
+      "id": 18,
+      "sex": "men",
+      "name": "Chino pants",
+      "type": "Pants",
+      "price": 55,
+      "photos": [
+        "./assets/img/products/men/18-main-photo.webp",
+        "./assets/img/products/men/18-photo.webp",
+        "./assets/img/products/men/18-photo-2.webp"
+      ],
+      "desc": "lorem ipsum bla bla bla",
+      "color": "black",
+      "size": ["S", "M", "L"],
+      "sale": false,
+      "oldPrice": "",
+      "newIn": false
     }
   ]
 }

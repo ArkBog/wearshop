@@ -1,1 +1,102 @@
-<p>men-home works!</p>
+<div class="w-[80%] max-[1000px]:w-full mx-auto flex justify-evenly mt-8">
+    <select
+      name="what"
+      id="what"
+      class="rounded-lg bg-primaryColor text-secondaryColor p-1 tracking-[5px]"
+      #what
+      [(ngModel)]="typeFilter"
+      (change)="filterProducts()"
+    >
+      <option value="" selected>Type</option>
+      <option value="Shirts">Shirts</option>
+      <option value="Sweatshirts">Sweatshirts</option>
+      <option value="Pants">Pants</option>
+      <option value="Shoes">Shoes</option>
+    </select>
+    <select
+      name="color"
+      id="color"
+      class="rounded-lg bg-primaryColor text-secondaryColor p-1 tracking-[5px]"
+      #color
+      [(ngModel)]="colorFilter"
+      (change)="filterProducts()"
+    >
+      <option value="" selected>Color</option>
+      <option value="black">Black</option>
+      <option value="white">White</option>
+      <option value="red">Red</option>
+      <option value="grey">Grey</option>
+      <option value="pink">Pink</option>
+      <option value="blue">Blue</option>
+      <option value="other">Other</option>
+    </select>
+    <select
+      name="size"
+      id="size"
+      class="rounded-lg bg-primaryColor text-secondaryColor p-1 tracking-[5px]"
+      #size
+      [(ngModel)]="sizeFilter"
+      (change)="filterProducts()"
+    >
+      <option value="" selected>Size</option>
+      <option value="XS">XS</option>
+      <option value="S">S</option>
+      <option value="M">M</option>
+      <option value="L">L</option>
+      <option value="39">39</option>
+      <option value="40">40</option>
+      <option value="41">41</option>
+      <option value="42">42</option>
+      <option value="43">43</option>
+      <option value="44">44</option>
+      <option value="45">45</option>
+    </select>
+  </div>
+  <div
+    class="w-[1000px] max-[1000px]:w-full mx-auto grid grid-cols-3 max-[1000px]:grid-cols-1 mt-8"
+  >
+    <div
+      *ngFor="let product of filteredProducts"
+      class="w-[300px] h-[400px] rounded-lg bg-primaryColor mx-auto mb-6 relative"
+    >
+      <div
+        class="absolute top-1 left-1 text-secondaryColor hover:text-rose-600 z-50"
+      >
+        <mat-icon
+          fontIcon="favorite"
+          (click)="addToFavourites(product)"
+        ></mat-icon>
+      </div>
+      <div
+        class="w-[300px] h-[400px] rounded-lg bg-primaryColor mx-auto mb-6 relative on-hover overflow-hidden"
+        (click)="choosenProduct(product.id)"
+      >
+        <div
+          *ngIf="product.sale === true"
+          class="absolute left-[50%] top-[10%] text-secondaryColor px-[75px] z-50 uppercase bg-rose-600 origin-center rotate-45"
+        >
+          sale
+        </div>
+        <div class="rounded-lg h-[250px] w-full overflow-hidden">
+          <img
+            [src]="product.photos[0]"
+            alt=""
+            class="rounded-lg h-[250px] w-full object-cover"
+          />
+        </div>
+        <h1 class="text-secondaryColor text-center">{{ product.name }}</h1>
+        <div class="w-full text-[2rem] text-center text-secondaryColor font-bold">
+          {{ product.price | currency }}
+        </div>
+        <div
+          class="w-full text-[1.5rem] text-center text-secondaryColor font-bold line-through"
+        >
+          {{ product.oldPrice | currency }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="filteredProducts.length === 0" class="w-[1000px] h-[80vh] mx-auto font-bold text-center">
+    Sorry, we don't have these products. Change your filters and find something else.
+  </div>
+  
