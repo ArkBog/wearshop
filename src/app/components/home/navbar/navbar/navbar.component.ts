@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Menu } from 'src/app/interfaces/menu';
 import { AuthService } from 'src/app/services/auth.service';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import users from '../../../../database/users.json';
+import { CartService } from 'src/app/services/cart.service';
 
 const data = users;
 
@@ -38,6 +39,7 @@ export class NavbarComponent implements OnInit {
   ];
 
   loginFormIsOpen = false;
+  cartIsOpen = false;
 
   login: string = 'admin';
   password: string = 'admin123';
@@ -46,7 +48,8 @@ export class NavbarComponent implements OnInit {
 
   constructor(
     private authService: AuthService,
-    public breakpointObserver: BreakpointObserver
+    public breakpointObserver: BreakpointObserver,
+    private cartService: CartService
   ) {}
 
   usersFounded: any;
@@ -60,6 +63,8 @@ export class NavbarComponent implements OnInit {
     login: new FormControl(),
     password: new FormControl(),
   });
+
+  basket:any[] = this.cartService.basket; 
 
   ngOnInit() {}
 
@@ -82,10 +87,15 @@ export class NavbarComponent implements OnInit {
   openLoginForm() {
     if (this.loginFormIsOpen === false) {
       this.loginFormIsOpen = true;
-      console.log(this.loginFormIsOpen);
     } else {
       this.loginFormIsOpen = false;
-      console.log(this.loginFormIsOpen);
+    }
+  }
+  openCart() {
+    if (this.cartIsOpen === false) {
+      this.cartIsOpen = true;
+    } else {
+      this.cartIsOpen = false;
     }
   }
   openMenu(arg: string) {
@@ -106,5 +116,9 @@ export class NavbarComponent implements OnInit {
           this.menuIsOpen = 'none';
         }
       });
+  }
+  sumProducts():number {
+    const numberOfProducts = this.basket.reduce((accumulator, element) => accumulator + element.quantity, 0);
+    return numberOfProducts
   }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CartService } from 'src/app/services/cart.service';
 import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { ProductsService } from 'src/app/services/products.service';
   styleUrls: ['./product-details.component.css'],
 })
 export class ProductDetailsComponent implements OnInit {
-  constructor(private productsService: ProductsService) {}
+  constructor(private productsService: ProductsService, private cartService: CartService) {}
 
   products = this.productsService.products;
   productId = this.productsService.product;
@@ -36,5 +37,9 @@ export class ProductDetailsComponent implements OnInit {
   paginationChangeSlide(param:number){
     this.count = param;
     this.photoSrc = this.product.photos[this.count];
+  }
+  addToCart(choosenProduct:any, size:string, quantity: number){
+    this.cartService.addToBasket(choosenProduct, size, quantity);
+    console.log(this.cartService.basket);
   }
 }

@@ -4,27 +4,65 @@
   >
     {{ product.name }}
   </h1>
-  <div class="grid grid-cols-3 grid-rows-4 w-[98%] mx-auto max-[1000px]:flex max-[1000px]:flex-col">
+  <div
+    class="grid grid-cols-3 grid-rows-4 w-[98%] mx-auto max-[1000px]:flex max-[1000px]:flex-col"
+  >
     <div class="col-span-2 row-span-3 max-[1000px]:w-full">
       <div class="relative">
-        <img class="w-[100%] max-[1000px]:h-full max-[1000px]:w-auto object-cover rounded-lg" [src]="photoSrc" alt=""  />
-        <div class="flex absolute top-[40%] justify-between w-[100%] text-8xl z-50">
-            <p (click)="changeSlide(-1)" class="pointer"><</p>
-            <p (click)="changeSlide(+1)" class="pointer">></p>
+        <img
+          class="w-[100%] max-[1000px]:h-full max-[1000px]:w-auto object-cover rounded-lg"
+          [src]="photoSrc"
+          alt=""
+        />
+        <div
+          class="flex absolute top-[40%] justify-between w-[100%] text-8xl z-50"
+        >
+          <p (click)="changeSlide(-1)" class="pointer"><</p>
+          <p (click)="changeSlide(+1)" class="pointer">></p>
         </div>
       </div>
     </div>
     <div class="px-2">{{ product.desc }}</div>
-    <div class="px-2 text-center text-3xl font-bold">{{ product.price | currency }}
-      <p class="text-2xl font-normal line-through">{{product.oldPrice | currency}}</p>
+    <div class="px-2 text-center text-3xl font-bold">
+      {{ product.price | currency }}
+      <p class="text-2xl font-normal line-through">
+        {{ product.oldPrice | currency }}
+      </p>
     </div>
     <div class="px-2 w-full">
-      <button class="rounded-lg bg-primaryColor text-secondaryColor p-3 flex on-hover h-[50px] my-2 mx-auto"><p class="pr-2">Add to cart</p><mat-icon fontIcon="shopping_cart"></mat-icon></button>
-      <button class="rounded-lg bg-primaryColor text-secondaryColor p-3 flex on-hover h-[50px] my-2 mx-auto"><p class="pr-2">Add to favourites</p><mat-icon fontIcon="favorite"></mat-icon></button>
+      <select
+        class="rounded-lg bg-primaryColor text-secondaryColor p-3 flex on-hover h-[50px] my-2 mx-auto" #size
+      >
+        <p class="pr-2">Size</p>
+        <option value="" disabled selected>Size</option>
+        <option *ngFor="let item of product.size" [value]="item">
+          {{ item }}
+        </option>
+      </select>
+      <button
+        class="rounded-lg bg-primaryColor text-secondaryColor p-3 flex on-hover h-[50px] my-2 mx-auto" (click)="addToCart(product, size.value, +1)"
+      >
+        <p class="pr-2">Add to cart</p>
+        <mat-icon fontIcon="shopping_cart"></mat-icon>
+      </button>
+      <button
+        class="rounded-lg bg-primaryColor text-secondaryColor p-3 flex on-hover h-[50px] my-2 mx-auto"
+      >
+        <p class="pr-2">Add to favourites</p>
+        <mat-icon fontIcon="favorite"></mat-icon>
+      </button>
     </div>
     <div class="col-span-2 flex justify-between max-[1000px]:hidden">
-      <div *ngFor="let item of product.photos; let i = index" (click)="paginationChangeSlide(i)">
-        <img [src]="item" alt="" class="w-[150px] h-[150px] object-cover m-6 rounded-lg pointer" [ngClass]=" count === i ? 'active' : '' ">
+      <div
+        *ngFor="let item of product.photos; let i = index"
+        (click)="paginationChangeSlide(i)"
+      >
+        <img
+          [src]="item"
+          alt=""
+          class="w-[150px] h-[150px] object-cover m-6 rounded-lg pointer"
+          [ngClass]="count === i ? 'active' : ''"
+        />
       </div>
     </div>
   </div>

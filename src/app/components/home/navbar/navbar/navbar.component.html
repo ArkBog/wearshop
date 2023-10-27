@@ -63,9 +63,16 @@
         </div>
       </div>
     </div>
-    <div class="flex px-6 max-[1000px]:px-3 on-hover">
-      <mat-icon fontIcon="shopping_cart" class="mr-2"></mat-icon>
+    <div class="flex px-6 max-[1000px]:px-3 on-hover " (click)="openCart()">
+      <div >{{ sumProducts() }}</div>
+      <mat-icon fontIcon="shopping_cart" class="mr-2 relative"></mat-icon>
       <p class="tracking-widest menu-icon-text">Cart</p>
+    </div >
+    <div *ngIf="cartIsOpen === true"
+    class="absolute mt-[2.5rem] p-[1rem] bg-primaryColor z-10 top-0 right-10 rounded-[10px]">
+    <div *ngFor="let i of basket" class="flex">
+      {{i.name}} {{i.quantity}} x {{i.price | currency}}
+    </div>
     </div>
     <div class="hamburger-icon max-[1000px]:px-3 on-hover">
       <mat-icon fontIcon="menu" (click)="openMenu('block')"></mat-icon>
