@@ -6,6 +6,7 @@ import { ProductInCart } from '../interfaces/product-in-cart';
 })
 export class CartService {
   basket: ProductInCart[] = [];
+  // totalCost:any ;
 
   constructor() {}
 
@@ -20,6 +21,10 @@ export class CartService {
     };
     this.basket.push(product);
   }
+  sumPrice(){
+    const totalCost = this.basket.reduce((accumaltor, element) => accumaltor + (element.price * element.quantity), 0);
+    return totalCost;
+  }
 
   addToBasket(choosenProduct: any, size: string, quantity: number) {
     if (size === '') {
@@ -32,7 +37,8 @@ export class CartService {
         this.createProduct(choosenProduct, size, quantity)
       }
     }
-      
+    // this.sumPrice();
   }
+  
 
 }

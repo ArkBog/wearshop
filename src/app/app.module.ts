@@ -36,6 +36,7 @@ import { LookbookWomenComponent } from './components/home/lookbook/lookbook-wome
 import { LookbookMenComponent } from './components/home/lookbook/lookbook-men/lookbook-men.component';
 import { ProductsService } from './services/products.service';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { CartComponent } from './components/cart/cart.component';
 
 
 @NgModule({
@@ -67,7 +68,8 @@ import { ProductDetailsComponent } from './components/product-details/product-de
     ContainsComponent,
     LookbookWomenComponent,
     LookbookMenComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

@@ -20,6 +20,7 @@ import { PrivacyPolicyComponent } from './components/home/footer/privacy-policy/
 import { ShippingComponent } from './components/home/footer/shipping/shipping.component';
 import { ContainsComponent } from './components/home/footer/contains/contains.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { CartComponent } from './components/cart/cart.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -41,7 +42,8 @@ const routes: Routes = [
   {path: 'privacy-policy', component:PrivacyPolicyComponent},
   {path: 'shipping', component:ShippingComponent},
   {path: 'contains', component:ContainsComponent},
-  {path: 'product-details', component: ProductDetailsComponent}
+  {path: 'product-details', component: ProductDetailsComponent},
+  {path: 'cart-component', component: CartComponent}
 ];
 
 @NgModule({

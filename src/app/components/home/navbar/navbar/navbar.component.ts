@@ -121,4 +121,7 @@ export class NavbarComponent implements OnInit {
     const numberOfProducts = this.basket.reduce((accumulator, element) => accumulator + element.quantity, 0);
     return numberOfProducts
   }
+  cost(){
+    return this.cartService.sumPrice();
+  }
 }
