@@ -1,1 +1,26 @@
-<p>cart works!</p>
+<div class="w-[1000px] mx-auto pt-6 pb-[50vh]">
+    <div *ngFor="let item of basket; let i  = index" class="h-[100px] w-full flex justify-evenly">
+        <div>
+            <img [src]="item.photo" alt="item.name" class="rounded-lg h-[90px] w-[90px] object-cover">
+        </div>
+        <div>
+            <p>{{item.name}}</p>
+            <p>Size: {{item.size}}</p>
+            <div class="flex">
+                <div (click)="changeQuantity(i, -1)" class="cursor-pointer">-</div>
+                <div class="px-3">Quantity: {{item.quantity}}</div>
+                <div (click)="changeQuantity(i, +1)" class="cursor-pointer">+</div>
+            </div> 
+            <p>Price: {{item.price | currency}}</p> 
+        </div>
+        <div>
+            {{sumTheProduct(item.price, item.quantity) | currency}}
+        </div>
+        <div (click)="removeProduct(i)" class="font-bold cursor-pointer">
+            X
+        </div>
+</div>
+<div class="w-[1000px] mx-auto flex items-center my-5">
+    <div class="w-[75%] text-right font-bold text-2xl">SUM: {{sumCost() | currency}}</div>
+    <button class="rounded-lg bg-primaryColor text-secondaryColor p-3 flex on-hover h-[50px] my-2 mx-auto" [routerLink]="['/payment']">Go to payment</button>
+</div>

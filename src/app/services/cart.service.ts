@@ -37,7 +37,6 @@ export class CartService {
         this.createProduct(choosenProduct, size, quantity)
       }
     }
-    // this.sumPrice();
   }
   
 

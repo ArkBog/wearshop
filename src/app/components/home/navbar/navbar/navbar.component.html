@@ -99,7 +99,7 @@
         <div class="w-[67%]">Sum:</div>
         <div class="font-bold">{{ cost() | currency }}</div>
       </div>
-      <button *ngIg="basket.length > 0" [routerLink]="['/cart-component']" class="rounded-lg bg-primaryColor text-secondaryColor p-3 flex on-hover h-[50px] my-2 mx-auto">Go to cart</button>
+      <button *ngIf="basket.length > 0" [routerLink]="['/cart-component']" class="rounded-lg bg-primaryColor text-secondaryColor p-3 flex on-hover h-[50px] my-2 mx-auto">Go to cart</button>
       <div *ngIf="basket.length === 0">Cart is empty</div>
     </div>
     <div class="hamburger-icon max-[1000px]:px-3 on-hover">

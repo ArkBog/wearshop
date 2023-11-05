@@ -21,6 +21,8 @@ import { ShippingComponent } from './components/home/footer/shipping/shipping.co
 import { ContainsComponent } from './components/home/footer/contains/contains.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { CartComponent } from './components/cart/cart.component';
+import { AuthGuard } from './auth.guard';
+import { PaymentComponent } from './components/payment/payment.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -43,7 +45,8 @@ const routes: Routes = [
   {path: 'shipping', component:ShippingComponent},
   {path: 'contains', component:ContainsComponent},
   {path: 'product-details', component: ProductDetailsComponent},
-  {path: 'cart-component', component: CartComponent}
+  {path: 'cart-component', component: CartComponent},
+  {path:"payment", component: PaymentComponent, canActivate: [AuthGuard]}
 ];
 
 @NgModule({
