@@ -21,7 +21,7 @@ export class AuthGuard implements CanActivate {
       if (this.authService.isUserLoggedIn()){
         return true
       } else {
-        this.router.navigate([''])
+        alert("You have to log in first")
          return false
       }
 

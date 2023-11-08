@@ -1,41 +1,9 @@
-<div class="w-[80%] max-[1000px]:w-full mx-auto flex justify-evenly mt-8">
-    <select
-      name="color"
-      id="color"
-      class="rounded-lg bg-primaryColor text-secondaryColor p-1 tracking-[5px]"
-      #color
-      [(ngModel)]="colorFilter"
-      (change)="filterProducts()"
-    >
-      <option value="" selected>Color</option>
-      <option value="black">Black</option>
-      <option value="white">White</option>
-      <option value="red">Red</option>
-      <option value="grey">Grey</option>
-      <option value="pink">Pink</option>
-      <option value="blue">Blue</option>
-      <option value="other">Other</option>
-    </select>
-    <select
-      name="size"
-      id="size"
-      class="rounded-lg bg-primaryColor text-secondaryColor p-1 tracking-[5px]"
-      #size
-      [(ngModel)]="sizeFilter"
-      (change)="filterProducts()"
-    >
-      <option value="" selected>Size</option>
-      <option value="XS">XS</option>
-      <option value="S">S</option>
-      <option value="M">M</option>
-      <option value="L">L</option>
-    </select>
-  </div>
+
   <div
   class="w-[1000px] max-[1000px]:w-full mx-auto grid grid-cols-3 max-[1000px]:grid-cols-1 mt-8"
 >
   <div
-    *ngFor="let product of filteredProducts"
+    *ngFor="let product of products"
     class="w-[300px] h-[400px] rounded-lg bg-primaryColor mx-auto mb-6 relative"
   >
     <div
@@ -44,7 +12,7 @@
       <mat-icon
         fontIcon="favorite"
         (click)="addToFavourites(product)"
-        [ngClass]="{'in-favourites': favProd.includes(product)}"
+        [ngClass]="{'in-favourites': products.includes(product)}"
       ></mat-icon>
     </div>
     <div
@@ -76,7 +44,8 @@
     </div>
   </div>
 </div>
-<div *ngIf="filteredProducts.length === 0" class="w-[1000px] max-[1000px]:w-full h-[60vh] mx-auto font-bold text-center">
-    Sorry, we don't have these products. Change your filters and find something else.
-  </div>
-  
+<div *ngIf="products.length === 0" class="w-[1000px] h-[60vh] mx-auto font-bold text-center">
+  Sorry, we don't have these products. Change your filters and find something else.
+</div>
+
+

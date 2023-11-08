@@ -23,6 +23,7 @@ import { ProductDetailsComponent } from './components/product-details/product-de
 import { CartComponent } from './components/cart/cart.component';
 import { AuthGuard } from './auth.guard';
 import { PaymentComponent } from './components/payment/payment.component';
+import { FavouritesComponent } from './components/profile/favourites/favourites.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -46,7 +47,9 @@ const routes: Routes = [
   {path: 'contains', component:ContainsComponent},
   {path: 'product-details', component: ProductDetailsComponent},
   {path: 'cart-component', component: CartComponent},
+  {path: 'favourites-component', component: FavouritesComponent},
   {path:"payment", component: PaymentComponent, canActivate: [AuthGuard]}
+
 ];
 
 @NgModule({

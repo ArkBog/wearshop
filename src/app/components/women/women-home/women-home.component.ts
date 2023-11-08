@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
+import { FavouritesService } from 'src/app/services/favourites.service';
 import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
@@ -10,7 +12,8 @@ import { ProductsService } from 'src/app/services/products.service';
 export class WomenHomeComponent implements OnInit {
   constructor(
     private productsService: ProductsService,
-    private router: Router
+    private router: Router,
+    private favouritesService: FavouritesService
   ) {}
 
   products = this.productsService.products.filter((e) => e.sex === 'women');
@@ -20,17 +23,19 @@ export class WomenHomeComponent implements OnInit {
   typeFilter: string = '';
   colorFilter: string = '';
   sizeFilter: string = '';
+  
+  favProd = this.favouritesService.favouritesProducts;
 
   ngOnInit() {
-    console.log(this.products);
+
   }
 
   choosenProduct(param: any) {
     this.productsService.product = param;
     this.router.navigate(['/product-details']);
   }
-  addToFavourites(param: any) {
-    console.log(param);
+  addToFavourites(product: any) {
+    return this.favouritesService.addProductToFavourites(product);
   }
 
   filterProducts() {

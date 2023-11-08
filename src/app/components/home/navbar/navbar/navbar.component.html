@@ -34,7 +34,7 @@
     </div>
     <div
       *ngIf="loginFormIsOpen === true"
-      class="absolute mt-[2.5rem] p-[1rem] bg-primaryColor z-10 top-0 left-0 rounded-[10px]"
+      class="absolute mt-[2.5rem] p-[1rem] bg-primaryColor z-[100] top-0 left-0 rounded-[10px]"
     >
       <form
         *ngIf="userLogged === false"
@@ -72,6 +72,12 @@
         >
           <p>Your orders</p>
           <mat-icon fontIcon="shopping_bag" class="ml-2"></mat-icon>
+        </div>
+        <div
+          class="flex justify-between p-2 hover:bg-thirdColor rounded-[10px] transition-all duration-300 cursor-pointer" [routerLink]="['/favourites-component']"
+        >
+          <p>Favourites</p>
+          <mat-icon fontIcon="favorite" class="ml-2"></mat-icon>
         </div>
         <div
           class="flex justify-between p-2 hover:bg-thirdColor rounded-[10px] transition-all duration-300 cursor-pointer"

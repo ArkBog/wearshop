@@ -3,3 +3,6 @@
     transition: all .3s ease-in-out;
     cursor: pointer;
 }
+.in-favourites{
+    @apply text-rose-600
+}

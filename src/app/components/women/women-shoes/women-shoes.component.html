@@ -40,11 +40,12 @@
     class="w-[300px] h-[400px] rounded-lg bg-primaryColor mx-auto mb-6 relative"
   >
     <div
-      class="absolute top-1 left-1 text-secondaryColor hover:text-rose-600 z-50"
+      class="absolute top-1 left-1 text-secondaryColor hover:text-rose-600 z-50 cursor-pointer"
     >
       <mat-icon
         fontIcon="favorite"
         (click)="addToFavourites(product)"
+        [ngClass]="{'in-favourites': favProd.includes(product)}"
       ></mat-icon>
     </div>
     <div

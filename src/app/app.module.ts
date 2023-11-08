@@ -38,6 +38,7 @@ import { ProductsService } from './services/products.service';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { CartComponent } from './components/cart/cart.component';
 import { PaymentComponent } from './components/payment/payment.component';
+import { FavouritesComponent } from './components/profile/favourites/favourites.component';
 
 
 @NgModule({
@@ -71,7 +72,8 @@ import { PaymentComponent } from './components/payment/payment.component';
     LookbookMenComponent,
     ProductDetailsComponent,
     CartComponent,
-    PaymentComponent
+    PaymentComponent,
+    FavouritesComponent
   ],
   imports: [
     BrowserModule,
