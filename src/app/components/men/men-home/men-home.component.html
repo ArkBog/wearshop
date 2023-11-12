@@ -51,6 +51,13 @@
       <option value="44">44</option>
       <option value="45">45</option>
     </select>
+    <select #sort (change)="sortProducts(sort.value)" class="rounded-lg bg-primaryColor text-secondaryColor p-1 tracking-[5px]">
+      <option value="" selected disabled>Sort</option>
+      <option value="priceDesc">Price Desc</option>
+      <option value="priceAsce">Price Asce</option>
+      <option value="nameDesc">Name Desc</option>
+      <option value="nameAsce">Name Asce</option>
+    </select>
   </div>
   <div
     class="w-[1000px] max-[1000px]:w-full mx-auto grid grid-cols-3 max-[1000px]:grid-cols-1 mt-8"

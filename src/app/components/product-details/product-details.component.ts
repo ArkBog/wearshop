@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from 'src/app/services/cart.service';
+import { FavouritesService } from 'src/app/services/favourites.service';
 import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { ProductsService } from 'src/app/services/products.service';
   styleUrls: ['./product-details.component.css'],
 })
 export class ProductDetailsComponent implements OnInit {
-  constructor(private productsService: ProductsService, private cartService: CartService) {}
+  constructor(private productsService: ProductsService, private cartService: CartService, private favouritesService: FavouritesService) {}
 
   products = this.productsService.products;
   productId = this.productsService.product;
@@ -41,5 +42,8 @@ export class ProductDetailsComponent implements OnInit {
   addToCart(choosenProduct:any, size:string, quantity: number){
     this.cartService.addToBasket(choosenProduct, size, quantity);
     console.log(this.cartService.basket);
+  }
+  addToFavourites(product: any) {
+    return this.favouritesService.addProductToFavourites(product);
   }
 }

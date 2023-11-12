@@ -46,4 +46,44 @@ export class WomenShoesComponent implements OnInit {
       return colorMatch && sizeMatch;
     });
   }
+  sortProducts(param: any) {
+    switch (param) {
+      case 'priceDesc':
+        this.products = this.filteredProducts.sort(
+          (firstItem, secondItem) => secondItem.price - firstItem.price
+        );
+        break;
+      case 'priceAsce':
+        this.products = this.filteredProducts.sort(
+          (firstItem, secondItem) => firstItem.price - secondItem.price
+        );
+        break;
+      case 'nameDesc':
+        this.products = this.filteredProducts.sort((a, b) => {
+          {
+            if (a.name < b.name) {
+              return 1;
+            }
+            if (a.name > b.name) {
+              return -1;
+            }
+          }
+          return 0;
+        });
+      break;
+      case 'nameAsce':
+        this.products = this.filteredProducts.sort((a, b) => {
+          {
+            if (a.name < b.name) {
+              return -1;
+            }
+            if (a.name > b.name) {
+              return 1;
+            }
+          }
+          return 0;
+        });
+      break;
+    }
+  }
 }
