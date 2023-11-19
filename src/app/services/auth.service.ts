@@ -8,7 +8,8 @@ export class AuthService {
 
   constructor() { }
 
-  userIsLogged = false
+  userIsLogged = false;
+  loggedUser: any;
 
   isUserLoggedIn(){
     return this.userIsLogged

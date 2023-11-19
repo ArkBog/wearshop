@@ -68,7 +68,7 @@
         />
         <div class="text-center m-2">Hello {{ userName }}</div>
         <div
-          class="flex justify-between p-2 hover:bg-thirdColor rounded-[10px] transition-all duration-300 cursor-pointer"
+          class="flex justify-between p-2 hover:bg-thirdColor rounded-[10px] transition-all duration-300 cursor-pointer" [routerLink]="['/orders']"
         >
           <p>Your orders</p>
           <mat-icon fontIcon="shopping_bag" class="ml-2"></mat-icon>

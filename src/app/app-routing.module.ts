@@ -24,6 +24,7 @@ import { CartComponent } from './components/cart/cart.component';
 import { AuthGuard } from './auth.guard';
 import { PaymentComponent } from './components/payment/payment.component';
 import { FavouritesComponent } from './components/profile/favourites/favourites.component';
+import { OrdersComponent } from './components/profile/orders/orders.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -48,7 +49,8 @@ const routes: Routes = [
   {path: 'product-details', component: ProductDetailsComponent},
   {path: 'cart-component', component: CartComponent},
   {path: 'favourites-component', component: FavouritesComponent},
-  {path:"payment", component: PaymentComponent, canActivate: [AuthGuard]}
+  {path:"payment", component: PaymentComponent, canActivate: [AuthGuard]},
+  {path:"orders", component: OrdersComponent},
 
 ];
 

@@ -39,6 +39,7 @@ import { ProductDetailsComponent } from './components/product-details/product-de
 import { CartComponent } from './components/cart/cart.component';
 import { PaymentComponent } from './components/payment/payment.component';
 import { FavouritesComponent } from './components/profile/favourites/favourites.component';
+import { OrdersComponent } from './components/profile/orders/orders.component';
 
 
 @NgModule({
@@ -73,7 +74,8 @@ import { FavouritesComponent } from './components/profile/favourites/favourites.
     ProductDetailsComponent,
     CartComponent,
     PaymentComponent,
-    FavouritesComponent
+    FavouritesComponent,
+    OrdersComponent
   ],
   imports: [
     BrowserModule,

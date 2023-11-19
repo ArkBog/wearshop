@@ -1,0 +1,15 @@
+<div class="w-[1000px] max-[1000px]:w-full mx-auto">
+  <div
+    class="w-[1000px] max-[1000px]:w-full mx-auto grid grid-cols-3 max-[1000px]:grid-cols-1 mt-8"
+    *ngFor="let order of yourOrders"
+  >
+    <div><p class="font-bold">Order number: </p>{{ order.id }}</div>
+    <div>
+        <p class="font-bold">Products:</p>
+      <div class="flex flex-col" *ngFor="let product of order.products">
+        <div>{{ product.productName }} x {{ product.quantity }}</div>
+      </div>
+    </div>
+    <div><p class="font-bold">Price: </p>{{ order.price | currency}}</div>
+  </div>
+</div>

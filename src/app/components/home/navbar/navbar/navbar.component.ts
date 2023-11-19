@@ -81,6 +81,7 @@ export class NavbarComponent implements OnInit {
         this.userLogin = this.usersFounded.login;
         this.userPhoto = this.usersFounded.photo;
         this.userName = this.usersFounded.name;
+        this.authService.loggedUser = this.usersFounded;
       }
     }
   }

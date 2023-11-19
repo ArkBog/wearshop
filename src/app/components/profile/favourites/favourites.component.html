@@ -1,5 +1,4 @@
-
-  <div
+<div
   class="w-[1000px] max-[1000px]:w-full mx-auto grid grid-cols-3 max-[1000px]:grid-cols-1 mt-8"
 >
   <div
@@ -12,7 +11,7 @@
       <mat-icon
         fontIcon="favorite"
         (click)="addToFavourites(product)"
-        [ngClass]="{'in-favourites': products.includes(product)}"
+        [ngClass]="{ 'in-favourites': products.includes(product) }"
       ></mat-icon>
     </div>
     <div
@@ -44,8 +43,10 @@
     </div>
   </div>
 </div>
-<div *ngIf="products.length === 0" class="w-[1000px] h-[60vh] mx-auto font-bold text-center">
-  Sorry, we don't have these products. Change your filters and find something else.
+<div
+  *ngIf="products.length === 0"
+  class="w-[1000px] h-[60vh] mx-auto font-bold text-center"
+>
+  Sorry, we don't have these products. Change your filters and find something
+  else.
 </div>
-
-
