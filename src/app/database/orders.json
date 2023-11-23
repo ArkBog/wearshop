@@ -4,25 +4,33 @@
       "id": 1,
       "userId": "001",
       "products": [{ "productId": 1, "quantity": 2, "productName": "Leggings"}, { "productId": 73, "quantity": 1, "productName": "Sports shorts"} ],
-      "price": 200
+      "price": 200,
+      "status": "completed",
+      "date": "2023-01-15"
     },
     {
       "id": 2,
       "userId": "004",
       "products": [{ "productId": 1, "quantity": 2, "productName": "Leggings"}, { "productId": 73, "quantity": 1, "productName": "Sports shorts"} ],
-      "price": 200
+      "price": 200,
+      "status": "completed",
+      "date": "2023-01-15"
     },
     {
       "id": 3,
       "userId": "003",
       "products": [{ "productId": 1, "quantity": 2, "productName": "Leggings"}, { "productId": 73, "quantity": 1, "productName": "Sports shorts"} ],
-      "price": 200
+      "price": 200,
+      "status": "canceled",
+      "date": "2023-01-15"
     },
     {
       "id": 4,
       "userId": "004",
       "products": [{ "productId": 2, "quantity": 1, "productName": "Leggings"}],
-      "price": 200
+      "price": 200,
+      "status": "in delivery",
+      "date": "2023-05-25"
     }
   ]
 }

@@ -10,12 +10,13 @@ import { OrdersService } from 'src/app/services/orders.service';
 export class OrdersComponent implements OnInit {
   constructor(private authService: AuthService, private ordersService: OrdersService){}
 
-  yourOrders: any;
+  yourOrders:any = []
   
   userId = this.authService.loggedUser.id;
 
   ngOnInit() {
-   this.yourOrders = this.ordersService.filteredOrders(this.userId)
+   this.ordersService.filteredOrders(this.userId);
+   this.yourOrders = this.ordersService.yourOrders.concat(this.ordersService.currentOrders)
   }
 
 

@@ -8,12 +8,13 @@ export class OrdersService {
 
   data = orders.orders
 
-  yourOrders: any[] = []
+  yourOrders: any[] = [];
+  currentOrders: any = [];
 
   constructor() { }
 
   filteredOrders(userId: string){
-    return this.data.filter((e) => 
+    this.yourOrders =  this.data.filter((e) => 
       e.userId === userId)
   }
 }
