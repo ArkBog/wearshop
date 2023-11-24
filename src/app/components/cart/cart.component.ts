@@ -16,7 +16,7 @@ export class CartComponent implements OnInit {
   ) {}
 
   basket = this.cartService.basket;
-  userId = this.authService.loggedUser.id;
+ 
   ordersArray: any;
 
   ngOnInit() {}
@@ -38,10 +38,11 @@ export class CartComponent implements OnInit {
     return this.cartService.sumPrice();
   }
   makeOrder() {
+    let userId = this.authService.loggedUser.id;
     let orderId = this.ordersService.data.length + 1;
       let order = {
         id: orderId,
-        userId: this.userId,
+        userId: userId,
         products: [{}],
         price: this.sumCost(),
         status: 'checking',

@@ -6,7 +6,6 @@ import { ProductInCart } from '../interfaces/product-in-cart';
 })
 export class CartService {
   basket: ProductInCart[] = [];
-  // totalCost:any ;
 
   constructor() {}
 
