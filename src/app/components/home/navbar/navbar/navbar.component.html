@@ -34,7 +34,7 @@
     </div>
     <div
       *ngIf="loginFormIsOpen === true"
-      class="absolute mt-[2.5rem] p-[1rem] bg-primaryColor z-[100] top-0 left-0 rounded-[10px]"
+      class="absolute mt-[2.5rem] p-[1rem] bg-primaryColor z-[100] top-0 left-0 max-[1000px]:left-[-80%] rounded-[10px]"
     >
       <form
         *ngIf="userLogged === false"
@@ -85,6 +85,11 @@
           <p>Settings</p>
           <mat-icon fontIcon="settings" class="ml-2"></mat-icon>
         </div>
+        <div
+          class="flex justify-between p-2 hover:bg-thirdColor rounded-[10px] transition-all duration-300 cursor-pointer" (click)="logout()"
+        >
+          <p>Logout</p>
+        </div>
       </div>
     </div>
     <div class="flex px-6 max-[1000px]:px-3 on-hover" (click)="openCart()">
@@ -94,7 +99,7 @@
     </div>
     <div
       *ngIf="cartIsOpen === true"
-      class="absolute mt-[2.5rem] p-[1rem] bg-primaryColor z-10 top-0 right-10 rounded-[10px]"
+      class="absolute mt-[2.5rem] p-[1rem] bg-primaryColor z-10 top-0 right-10 rounded-[10px] max-[1000px]:w-[200%]"
     >
       <div *ngFor="let i of basket" class="grid grid-cols-3">
         <div class="truncate">{{ i.name }}</div>

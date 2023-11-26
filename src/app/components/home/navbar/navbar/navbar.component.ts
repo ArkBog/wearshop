@@ -85,6 +85,11 @@ export class NavbarComponent implements OnInit {
       }
     }
   }
+  logout(){
+    this.userLogged = false;
+    this.authService.userIsLogged = false;
+
+  }
   openLoginForm() {
     if (this.loginFormIsOpen === false) {
       this.loginFormIsOpen = true;
